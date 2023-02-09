@@ -1,10 +1,11 @@
 require 'sinatra'
+require 'CSV'
 
 get '/' do
   'Hello World'
 end
 
-get '/home' do
-  "Let's Have a Party!"
-
+get '/party' do
+  puts "Let's Have a Party!"
+  erb :party 
 end
