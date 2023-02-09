@@ -1,1 +1,33 @@
-<h1>This is where the visible guest list will be, it is also where the Sign up Form will be. Interestingly enough....</h1>
+<h1>The Super Awesome Party!</h1>
+
+<p>We are going to have a party! There will be super bouncy things - like a super bouncy castle! A super-large trampoline! Lots of popcorn! ... and Squirrels!</p>
+
+<h2>Registered Guests so far:</h2>
+
+<p>(This is where the visible guest list will be...)</p>
+
+<p><%= params.inspect %></p>  # need to figure out how to give a 'pretty' output for the user
+
+<h2> Sign up below to join the fun!</h2>
+
+<form method="POST">
+
+<p>
+  <label for="fname">Name:
+    <input type="text" name="text_entered" placeholder="Your Name">
+  </label>
+</p>
+
+<p>
+<label>When will you get the the party?
+  <input type="time" name="time" placeholder="Arrival time">
+</label>
+</p>
+
+<p>
+<label>Ready to PARTY?! Click to join!<br><br>
+  <input type="submit" name="submit_button" value="sign up">
+</label>
+</p>
+
+</form>
