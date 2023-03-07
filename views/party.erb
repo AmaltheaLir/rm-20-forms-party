@@ -4,7 +4,14 @@
 
 <h2>Registered Guests so far:</h2>
 
-<p>(This is where the visible guest list will be...)</p>
+<p>Guests:</p>
+<ul>
+  <% @guests.each do |list| %>
+    <li>
+      Name: <%= list["name"] %> ~  Bringing: <%= list["name"] %> friends, at <%= list["name"] %>
+    </li>
+  <% end %>
+</ul>
 
 <p><%= params.inspect %></p>  # need to figure out how to give a 'pretty' output for the user
 

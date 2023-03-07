@@ -6,8 +6,17 @@ get '/' do
 end
 
 get '/party' do
+  @guests = CSV.read("guests.csv", headers: true)
   puts "Let's Have a Party!"
   erb :party 
+end
+
+get '/party/:guests' do
+  @guests = CSV.read("guests.csv", headers: true)
+
+  @guest = params["guests"]
+
+  erb :party
 end
 
 post '/party' do
@@ -15,4 +24,4 @@ post '/party' do
   erb :party
 end
 
-# need a break... ok, need to relearn about the whole csv files shebang. Have the basic form 'figured out'. Need to also figure out how to make the csv output print neatly on the party.erb view---probably that's part of the csv shebang. 
+# Did get the csv list to show, but not yet the columns numbers (not strings) past name. Still have to work on saving info to the csv from the form, etc.  
