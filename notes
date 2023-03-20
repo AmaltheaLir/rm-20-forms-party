@@ -1,3 +1,10 @@
+  At the last part of the assignment, where the POSt needs to happen. Am currently getting an error
+
+  sth???
+  list << caught value
+  @guests << list
+  
+  
   @guest = @guests.find do |item|
     params['lesson_number'] == item["number"]
   end
@@ -8,3 +15,5 @@
     puts "Let's Have a Party!"
     erb :party 
   end
+
+  <p><%= params.inspect %></p>

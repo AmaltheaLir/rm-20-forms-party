@@ -1,6 +1,26 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almendra&family=Nabla&display=swap" rel="stylesheet">
+
+  
+  <style>
+    h1 {
+      font-family: 'Nabla', cursive;
+    }
+
+    body {
+        font-family: 'Almendra', serif;
+        background: linear-gradient(to top left, #6600cc 0%, #00cc99 100%);
+    }
+  </style>
+
+</head>
+
+
 <h1>The Super Awesome Party!</h1>
 
-<p>We are going to have a party! There will be super bouncy things - like a super bouncy castle! A super-large trampoline! Lots of popcorn! ... and Squirrels!</p>
+<h3>We are going to have a party! There will be super bouncy things - like a super bouncy castle! A super-large trampoline! Lots of popcorn! ... and Squirrels!</h3>
 
 <h2>Registered Guests so far:</h2>
 
@@ -8,12 +28,10 @@
 <ul>
   <% @guests.each do |list| %>
     <li>
-      Name: <%= list["name"] %> ~  Bringing: <%= list["name"] %> friends, at <%= list["name"] %>
+      Name: <%= list["name"] %> ~  Bringing: <%= list[1] %> friends, at <%= list[2] %>
     </li>
   <% end %>
 </ul>
-
-<p><%= params.inspect %></p>  # need to figure out how to give a 'pretty' output for the user
 
 <h2> Sign up below to join the fun!</h2>
 
@@ -21,7 +39,13 @@
 
 <p>
   <label for="fname">Name:
-    <input type="text" name="text_entered" placeholder="Your Name">
+    <input type="text" name="name_entered" placeholder="Your Name">
+  </label>
+</p>
+
+<p>
+  <label for="number">Number of friends:
+    <input type="number" name="number_entered" placeholder="1-5">
   </label>
 </p>
 
@@ -33,8 +57,10 @@
 
 <p>
 <label>Ready to PARTY?! Click to join!<br><br>
-  <input type="submit" name="submit_button" value="sign up">
+  <input type="submit" name="submit_button" value="Join!">
 </label>
 </p>
+
+<br>
 
 </form>
